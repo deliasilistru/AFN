@@ -5,10 +5,10 @@ using namespace std;
 
 class AFN
 {
-    int q;          //nr. de stari totale
-    int f;          //nr. de  stari finale
-    int *F;         //starea/starile finala/finale
-    int g;          //nr. de  tranzitii am
+    int q;          //numarul de stari totale
+    int f;          //numarul de  stari finale
+    int *F;         //starile finale
+    int g;          //numarul de  tranzitii 
     struct tranz
     {
         int a,b;    //tranzitiile
@@ -32,7 +32,7 @@ public:
             in>>G[i].a>>G[i].b>>G[i].c;
         }
         stc=0;                   //starea curenta=0
-        ok=0;               //presupun cuvantul ca neapartinand alfabetului
+        ok=0;             
     }
     int verificare(char *cuvant, int stc, int pozitia_in_cuvant);           //afiseaza 1 daca cuvantul apartine alfabetului,
     //0 in caz contrar
@@ -86,3 +86,12 @@ int main()
 
     return 0;
 }
+//Citirea se face in modul urmator:
+//cuvantul se citeste de la consola;
+//din fisier se citeste:
+//numarul de stari,
+//numarul de stari finale,
+//starile finale,
+//numarul de tranzitii,
+//tranzitiile.
+
